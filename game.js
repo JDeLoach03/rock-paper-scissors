@@ -12,7 +12,7 @@ class Game {
     }
 
     checkGameConditions() {
-        if ()
+       
     }
 
     drawGame() {
