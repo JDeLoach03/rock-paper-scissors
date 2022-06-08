@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <div id="human">
+    <section class="whole-page">
+        <section id="human">
             <h2>Human</h2>
             <h3>Wins: <span class="human-wins"></span></h3>
             <button class="change-game">Change Game</button>
-        </div>
+        </section>
         <main id="game">
             <h1>Rock, Paper, Scissors</h1>
+            <h2>Choose your game!</h2>
             <section class="duel">
                 <h2>Choose your fighter!</h2>
-                <article class="game-box">
+                <article class="game-box classic">
                     <button class="btn">
                         <div>
                             <h2>🥹 Classic 🧠 </h2>  
@@ -26,7 +26,7 @@
                         <p>scissors > paper</p>
                     </button>
                 </article>
-                <article class="game-box">
+                <article class="game-box difficult">
                     <button class="btn">
                         <div>
                             <h2>🥹 Difficult 🧠 </h2>  
@@ -34,6 +34,7 @@
                         <p>rock > scissors & lizzard</p>   
                         <p>paper > rock & alien</p> 
                         <p>scissors > paper & lizzard</p>
+                        <p>lizard > paper & alien</p>
                         <p>alien > scissors & rock</p>
                     </button>
                 </article>
@@ -43,7 +44,7 @@
                 <button class="rock"><img src="pictures/rock.png" alt="rock"></button>
                 <button class="paper"><img src="pictures/happy-paper.png" alt="paper"></button>
                 <button class="scissors"><img src="pictures/happy-scissors.png" alt="scissors"></button>
-                <button class="lizzard" hidden><img src="pictures/lizard.png" alt="lizard"></button>
+                <button class="lizard" hidden><img src="pictures/lizard.png" alt="lizard"></button>
                 <button class="alien" hidden> <img src="pictures/happy-alien.png" alt="alien"></button>
             </section>
             <section class="result" hidden>
@@ -52,11 +53,10 @@
                 <img src="pictures/happy-scissors.png" alt="computer-choice">
             </section>
         </main>
-        <div id="computer">
+        <section id="computer">
             <h2>Computer</h2>
             <h3>Wins: <span class="comp-wins"></span></h3>
-        </div>
-    </div>
+        </section>
+    </section>
 </body>
-
 </html>
