@@ -1,3 +1,5 @@
+// GAME WILL HANDLE MANIPULATION OF DATA/ DATA HUB FOR EASY UNDERSTANDING
+
 class Game {
     constructor(player1, player2, gameType) {
         this.player1 = player1;
@@ -12,27 +14,25 @@ class Game {
         };
     }
 
-    checkGameConditions(answer1, answer2) {
+
+    checkGameConditions(humanAnswer, computerAnswer) {
         // utilizing a randomize function 
-        //math.floor(math.random()* 3) 
+        //--regular game Math.floor(math.random()* 3) || difficult version-- math.floor(math.random() * 5) 
         // need to check if what is passed through beats this win condition
-        //checking to see if p1's answer *conditions* match or lose to p2
-        //does scissors and lizzard contain scissors(answer2) for example for YOU JOSH
-        return this.winConditions[answer1].includes(answer2)
+        //checking to see if humans answer *conditions* match or lose to computer
+        // is arg1 > arg2 
+        return this.winConditions[humanAnswer].includes(computerAnswer)
     }
 
-    drawGame(answer1, answer2) {
-        return answer1 === answer2
+
+
+    //computer choice here with randomize function 
+    //this information will be sent to answer 2
+    
+
+    drawGame(humanAnswer, computerAnswer) {
+        return humanAnswer === computerAnswer
+        // also will be manipulated within main
     }
 
-    resetGame() {
-
-    }
 }
-
-// Two Player instances
-// A way to keep track of the data for the game board
-// A way to keep track of the selected game type
-// A way to check the Game’s board data for win conditions
-// A way to detect when a game is a draw (no one has won)
-// A way to reset the Game’s board to begin a new game
