@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   
   .whole-page {
@@ -11,12 +11,24 @@
       justify-content: space-between;
       align-items: flex-start; 
   }
+
+  h1 {
+      text-align: center;
+      font-size: 70px;
+  }
   
+  h2 {
+      text-align: center;
+  }
+
+
   #game {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100vh;
+    width: 80%
+    /* background-color: blueviolet; */
   }
 
   #human, #computer {
@@ -25,11 +37,12 @@
       height: 100vh;
       width: 20%;
       text-align: center;
+      background-color: blueviolet;
+      filter: brightness(80%)
   }
 
   .container {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       align-items: center;
   }
