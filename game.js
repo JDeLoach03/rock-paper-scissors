@@ -5,18 +5,24 @@ class Game {
         this.gameType = gameType;
         this.winConditions = {
             rock: ['scissors', 'lizard'],
-            paper: ['rock'],
-
-
-        }
+            paper: ['rock', 'alien'],
+            scissors: ['paper', 'lizard'],
+            lizard: ['paper', 'alien'],
+            alien: ['scissors', 'rock']
+        };
     }
 
-    checkGameConditions() {
-       
+    checkGameConditions(answer1, answer2) {
+        // utilizing a randomize function 
+        //math.floor(math.random()* 3) 
+        // need to check if what is passed through beats this win condition
+        //checking to see if p1's answer *conditions* match or lose to p2
+        //does scissors and lizzard contain scissors(answer2) for example for YOU JOSH
+        return this.winConditions[answer1].includes(answer2)
     }
 
-    drawGame() {
-
+    drawGame(answer1, answer2) {
+        return answer1 === answer2
     }
 
     resetGame() {
