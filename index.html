@@ -16,8 +16,8 @@
         </section>
         <main id="game">
             <h1>Rock, Paper, Scissors</h1>
-            <h2>Choose your game!</h2>
-            <section class="duel">
+            <section id="menu">
+                <h2>Choose your game!</h2>
                 <section class="container">
                     <article class="game-box classic">
                         <button class="btn">
@@ -43,15 +43,17 @@
                     </article>
                 </section>
             </section>
-            <section class="choose-fighter" hidden>
+            <section class="choose-fighter hidden center"  id="duel">
                 <h2>Choose your fighter!</h2>
+                <div class="row">
                 <button class="rock"><img src="pictures/rock.png" alt="rock"></button>
                 <button class="paper"><img src="pictures/happy-paper.png" alt="paper"></button>
                 <button class="scissors"><img src="pictures/happy-scissors.png" alt="scissors"></button>
-                <button class="lizard" hidden><img src="pictures/lizard.png" alt="lizard"></button>
-                <button class="alien" hidden> <img src="pictures/happy-alien.png" alt="alien"></button>
+                <button class="lizard hidden"><img src="pictures/lizard.png" alt="lizard"></button>
+                <button class="alien hidden" > <img src="pictures/happy-alien.png" alt="alien"></button>
+            </div>
             </section>
-            <section class="result" hidden>
+            <section class="result hidden center" id="results">
                 <h2>Human win 🧠</h2>
                 <img src="pictures/rock.png" alt="human-choice">
                 <img src="pictures/happy-scissors.png" alt="computer-choice">

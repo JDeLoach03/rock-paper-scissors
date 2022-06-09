@@ -17,15 +17,15 @@
 //upon choice from user, move token underneath image they have chosen
 
 // qeurySelectors
-var gameSection = document.querySelector('#game')
-var fighterSection = document.querySelector('.choose-fighter')
-var resultSection = document.querySelector('.result')
+var duelSection = document.querySelector('#duel')
+var resultSection = document.querySelector('#results')
 var humanSection = document.querySelector('#human')
 var computerSection = document.querySelector('#computer')
-
+var mainMenu = document.querySelector('#menu')
+var classicBtn = document.querySelector('.classic .btn')
 // eventListeners
 
-
+classicBtn.addEventListener('click', displayDuelSection)
 
 
 //functions for manipulation
@@ -39,15 +39,19 @@ function show(element) {
 
   
 
-  function displayGameSection() {
-    // on button click, it will take me to the appropriate section
+  function displayDuelSection() {
+    show(duelSection)
+    hide(mainMenu)
+
+    // on button click, it will take me to the appropriate section ()
     // the section of "game" will be hidden
     //section of "choose-fighter will be shown"
     //images will be sized appropriately and will need to utilize an event.target for specific elements and somehow attach those to selected choice
 
   }
 
-  function displayFighterSection() {
+  function displayDifficultSection() {
+    displayDuelSection()
     // it depends on the game which images will be shown
     // should I break these functions into 2, one for classic and another for difficult?
     // event listener will need to be attached to initial boxes to begin the switching of the displays

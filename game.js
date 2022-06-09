@@ -24,7 +24,11 @@ class Game {
         return this.winConditions[humanAnswer].includes(computerAnswer)
     }
 
-
+    // computerChoice() {
+    //     if (this.gameType === 'classic') {
+    //         return Math.floor(math.random() * 3)
+    //     }
+    // }
 
     //computer choice here with randomize function 
     //this information will be sent to answer 2
