@@ -1,4 +1,4 @@
-var game = new Game()
+var game = new Game('classic')
 
 //IF IT INVOLVES USER INTERACTION, FUNCTIONS SHOULD RELATE TO MAIN
 
@@ -21,6 +21,7 @@ var game = new Game()
 // qeurySelectors
 var duelSection = document.querySelector('#duel')
 var resultSection = document.querySelector('#results')
+var winningResults = document.querySelector('#results h2')
 var humanSection = document.querySelector('#human')
 var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
@@ -32,6 +33,7 @@ var scissors = document.querySelector('#scissors')
 var lizard = document.querySelector('#lizard')
 var alien = document.querySelector('#alien')
 var changeGameBtn = document.querySelector('.change-game')
+var computerAnswer = game.computerChoice()
 // eventListeners
 
 classicBtn.addEventListener('click', displayDuelSection)
@@ -79,6 +81,7 @@ function show(element) {
   }
 
   function displayResultSection() {
+    show()
      //hide the fight section
      //show the results section
      // interpolate chosen human/comp choice
@@ -103,12 +106,28 @@ function show(element) {
     //show + hide what needs to be hidden
   }
 
+  function whichGame(e) {
+    if (game.gameType === 'classic') {
 
+    } else {
+
+    }
+  }
 
 
   function selectChoice(event) {
   var id = event.target.id
-    console.log(id);
+    // console.log(id);
     game.player1Choice = id
-    game.gameConditions()
+    game.player2Choice = game.computerChoice('classic')
+    var whoWon = game.checkHumanWin()
+    console.log(whoWon);
+    winningResults.innerText = whoWon
+
   }
+
+  // function bullshit() {
+  //   if (game.gameType === 'classic') {
+
+  //   }
+  // }
