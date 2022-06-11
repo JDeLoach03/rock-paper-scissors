@@ -106,13 +106,13 @@ function show(element) {
     //show + hide what needs to be hidden
   }
 
-  function whichGame(e) {
-    if (game.gameType === 'classic') {
+  // function whichGame(e) {
+  //   if (game.gameType === 'classic') {
 
-    } else {
+  //   } else {
 
-    }
-  }
+  //   }
+  // }
 
 
   function selectChoice(event) {
