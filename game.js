@@ -7,49 +7,50 @@
 //within the properties, I would like to have the new instances of players, and add the "win conditions" separately and gameTypes
 
 class Game {
-    constructor() {
+    constructor(gameType) {
         this.person = new Player('emoji hearts')
         this.computer = new Player('robot face');
-        this.gameType 
+        this.gameType = gameType
+        this.player1Choice = null;
+        this.player2Choice = null;
         this.classicFighters = ['rock', 'paper', 'scissors']
         this.diffFighters = ['rock', 'paper', 'scissors', 'alien', 'lizzard']
-        };
-    }
-
+    };
 
 
     gameConditions() {
-        if (this.person.turn === this.computer.turn) {
-            return 'oof, sounds like a draw to me boss'
-        }
+        var whoWon = 'draw'
         if (this.player1Choice === 'rock' && (this.player2Choice === 'scissors' || this.player2Choice === 'lizard')) {
-          return 'human wins duh' 
+            this.person.increaseWins()
+            whoWon = this.person.name 
+        } else  {
+            whoWon = this.computer.name
+            this.computer.increaseWins()
         }
-        if (this.player1Choice === 'paper' && (this.player2Choice === 'rock' || this.player2Choice))
+        return whoWon
     }
 
-    // checkGameConditions(this.player``, this.player2Choice) {
-    //     // need to check if what is passed through beats this win condition
-    //     //checking to see if humans answer *conditions* match or lose to computer
-    //     // is arg1 > arg2 
-    //     return this.winConditions[this.player1Choice].includes(this.player2Choice)
-    // }
-
-    // computerChoice() {
-    //     // var choice = this.player2.playerTurn(this.gameType);
-
-    //     //computer choice here with randomize function 
-    //     //this information will gain access to the object key value and randomly select 
-       
-    // }
+    resetGame() { 
+        setTimeout(function() {
+            this.player1Choice = null
+            this.player2Choice = null
+            this.gameType = null 
+        }, 3000) 
 
         
-
-    // drawGame(this.player1Choice, computerAnswer) {
-    //     return this.player1Choice === this.player2Choice
-        // also will be manipulated within main
     }
 
-    //Make a method within here 
-
+    computerRandomChoice() {
+        if (this.gameType === 'difficult') {
+            var difficultFighters = ['rock', 'paper', 'scissors', 'lizard', 'alien']
+                difficultFighters[Math.floor(Math.random() * difficultFighters.length)]
+        } else {
+            if (gameType === 'classic') {
+             var classicFighters = ['rock', 'paper', 'scissors'] 
+             classicFighters[Math.floor(Math.random() * classicFighters.length)]
+        }
+    } 
 }
+
+
+

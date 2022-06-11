@@ -1,4 +1,4 @@
-game = new Game()
+var game = new Game()
 
 //IF IT INVOLVES USER INTERACTION, FUNCTIONS SHOULD RELATE TO MAIN
 
@@ -26,11 +26,11 @@ var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
 var classicBtn = document.querySelector('.classic .btn')
 var difficultBtn = document.querySelector('.difficult .btn')
-var rockBtn = document.querySelector('.rock')
-var paperBtn = document.querySelector('.paper')
-var scissorsBtn = document.querySelector('.scissors')
-var lizardBtn = document.querySelector('.lizard')
-var alienBtn = document.querySelector('.alien')
+var rock = document.querySelector('#rock')
+var paper = document.querySelector('#paper')
+var scissors = document.querySelector('#scissors')
+var lizard = document.querySelector('#lizard')
+var alien = document.querySelector('#alien')
 var changeGameBtn = document.querySelector('.change-game')
 // eventListeners
 
@@ -38,7 +38,12 @@ classicBtn.addEventListener('click', displayDuelSection)
 difficultBtn.addEventListener('click', displayDifficultSection)
 
 changeGameBtn.addEventListener('click', displayChangeGame)
-// rockBtn.addEventListener('click', selectChoice)
+rock.addEventListener('click', selectChoice)
+paper.addEventListener('click',selectChoice)
+scissors.addEventListener('click', selectChoice)
+lizard.addEventListener('click', selectChoice)
+alien.addEventListener('click', selectChoice)
+
 
 
 //functions for manipulation
@@ -98,7 +103,12 @@ function show(element) {
     //show + hide what needs to be hidden
   }
 
-  // function selectChoice(e) {
-  //   var omittedClasses = ' hidden'
-  //   var selection = e.target.getAttribute('class').replace(omittedClasses, '')
-  // }
+
+
+
+  function selectChoice(event) {
+  var id = event.target.id
+    console.log(id);
+    game.player1Choice = id
+    game.gameConditions()
+  }
