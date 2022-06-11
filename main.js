@@ -1,3 +1,5 @@
+game = new Game()
+
 //IF IT INVOLVES USER INTERACTION, FUNCTIONS SHOULD RELATE TO MAIN
 
 
@@ -23,9 +25,20 @@ var humanSection = document.querySelector('#human')
 var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
 var classicBtn = document.querySelector('.classic .btn')
+var difficultBtn = document.querySelector('.difficult .btn')
+var rockBtn = document.querySelector('.rock')
+var paperBtn = document.querySelector('.paper')
+var scissorsBtn = document.querySelector('.scissors')
+var lizardBtn = document.querySelector('.lizard')
+var alienBtn = document.querySelector('.alien')
+var changeGameBtn = document.querySelector('.change-game')
 // eventListeners
 
 classicBtn.addEventListener('click', displayDuelSection)
+difficultBtn.addEventListener('click', displayDifficultSection)
+
+changeGameBtn.addEventListener('click', displayChangeGame)
+// rockBtn.addEventListener('click', selectChoice)
 
 
 //functions for manipulation
@@ -40,9 +53,8 @@ function show(element) {
   
 
   function displayDuelSection() {
-    show(duelSection)
     hide(mainMenu)
-
+    show(duelSection)
     // on button click, it will take me to the appropriate section ()
     // the section of "game" will be hidden
     //section of "choose-fighter will be shown"
@@ -51,7 +63,11 @@ function show(element) {
   }
 
   function displayDifficultSection() {
-    displayDuelSection()
+    hide(mainMenu)
+    show(duelSection)
+    show(lizardBtn)
+    show(alienBtn)
+    // displayDuelSection()
     // it depends on the game which images will be shown
     // should I break these functions into 2, one for classic and another for difficult?
     // event listener will need to be attached to initial boxes to begin the switching of the displays
@@ -67,3 +83,22 @@ function show(element) {
      //will need to update whoever the winner of the game is at this time
      //
   }
+
+  function displayChangeGame() {
+    hide(duelSection)
+    hide(lizardBtn)
+    hide(alienBtn)
+    show(mainMenu)
+  }
+
+  function showCompWin() {
+    // if comp wins
+    //increase the wins
+    //manipulate the dom
+    //show + hide what needs to be hidden
+  }
+
+  // function selectChoice(e) {
+  //   var omittedClasses = ' hidden'
+  //   var selection = e.target.getAttribute('class').replace(omittedClasses, '')
+  // }

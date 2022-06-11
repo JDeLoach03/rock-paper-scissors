@@ -50,8 +50,10 @@
 
   .change-game {
       margin: 30px;
-      height: 40px;
       width: 108px;
+      height: 40px;
+      border: thick double #000000;
+      border-radius: 15px;
       align-self: center;
   }
 
@@ -76,7 +78,7 @@
   }
 
   img {
-      height: 220px;
+      height: 150px;
       width: auto;
   }
 
