@@ -27,9 +27,6 @@
 
 
   #game {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     height: 100vh;
     width: 80%
     /* background-color: blueviolet; */
@@ -53,8 +50,10 @@
 
   .change-game {
       margin: 30px;
-      height: 40px;
       width: 108px;
+      height: 40px;
+      border: thick double #000000;
+      border-radius: 15px;
       align-self: center;
   }
 
@@ -64,4 +63,26 @@
       padding: 5%;
       border: thick double #000000;
       border-radius: 15px;
+  }
+  
+  button {
+      background: transparent;
+      border: 0px;
+      
+  }
+
+  .center {
+      display: flex;
+      flex-direction: column;
+      align-items: space-between;
+  }
+
+  img {
+      height: 150px;
+      width: auto;
+  }
+
+  .row {
+      display: flex;
+      justify-content: center;
   }
