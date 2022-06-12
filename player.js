@@ -1,8 +1,8 @@
 class Player {
-    constructor(name, wins) {
+    constructor(name) {
         this.name = name;
-        this.wins = wins
-        this.takeTurn = false;
+        this.wins = 0;
+        this.choice = ''
     }
 
     playerTurn(gameType) {
