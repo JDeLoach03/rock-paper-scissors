@@ -6,7 +6,6 @@ class Player {
     }
 
     playerTurn(gameType) {
-        // console.log(game)
         if (gameType === 'classic') {
             console.log('hello');
             var classicFighters = ['rock', 'paper', 'scissors']

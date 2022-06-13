@@ -5,6 +5,7 @@ var game = new Game('classic')
 
 
 // qeurySelectors
+
 var duelSection = document.querySelector('#duel')
 var resultSection = document.querySelector('#results')
 // var winningResults = document.querySelector('#results h2')
@@ -13,6 +14,7 @@ var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
 var classicBtn = document.querySelector('.classic .btn')
 var difficultBtn = document.querySelector('.difficult .btn')
+var container = document.querySelector('.container')
 var rock = document.querySelector('#rock')
 var paper = document.querySelector('#paper')
 var scissors = document.querySelector('#scissors')
@@ -26,10 +28,11 @@ var computerScore = document.querySelector('.comp-wins')
 // classicBtn.addEventListener('click', setUpClassicGame)
 // difficultBtn.addEventListener('click', setUpDifficultGame)
 
-classicBtn.addEventListener('click', displayDuelSection)
+// window.addEventListener('load', chooseCpuFighter)
+classicBtn.addEventListener('click', displayClassicSection)
 difficultBtn.addEventListener('click', displayDifficultSection)
 
-changeGameBtn.addEventListener('click', displayChangeGame)
+changeGameBtn.addEventListener('click', changeGame)
 rock.addEventListener('click', selectChoice)
 paper.addEventListener('click',selectChoice)
 scissors.addEventListener('click', selectChoice)
@@ -49,47 +52,40 @@ function show(element) {
   }
 
 
-//  function setUpClassicGame() {
-//    //need to decide which game
-//    displayDuelSection();
-//    game = new Game('classic');
-//  }
+// function pickGame(event) {
+//   if (event.target.id === '')
+  // I need to match the id
+  //the point of this function, would be 
+// }
 
-//  function setUpDifficultGame() {
-//    displayDifficultSection();
-//    game = new Game('difficult');
-//    console.log('Yo mama')
-//  }
+// function startGame() {
+
+// }
   
-
-  function displayDuelSection() {
-    console.log('weenie hut general');
+  function displayClassicSection() {
+    // console.log('weenie hut general');
     hide(mainMenu);
     show(duelSection);
     show(changeGameBtn)
-    // updateScore()
-    // on button click, it will take me to the appropriate section ()
-    // the section of "game" will be hidden
-    //section of "choose-fighter will be shown"
+    game.gameType = 'classic'
     //images will be sized appropriately and will need to utilize an event.target for specific elements and somehow attach those to selected choice
 
   }
 
   function displayDifficultSection() {
-    console.log('gangster')
+    // console.log('gangster')
     hide(mainMenu)
     show(duelSection)
     show(lizard)
     show(alien)
     show(changeGameBtn)
+    game.gameType = 'difficult'
     // displayDuelSection()
-    // it depends on the game which images will be shown
-    // should I break these functions into 2, one for classic and another for difficult?
     // event listener will need to be attached to initial boxes to begin the switching of the displays
   }
 
 
-  function displayChangeGame() {
+  function changeGame() {
     hide(duelSection)
     hide(lizard)
     hide(alien)
@@ -102,22 +98,50 @@ function show(element) {
     computerScore.innerText = `Wins: ${game.player2.wins}`
     }
 
+  function displayResultSection() {
+    hide(duelSection)
+    show(resultSection)
+    resultSection = `
+    <img src="pictures/${game.player1.choice}.png" alt="${game.player1.choice}">
+    <img src="pictures/${game.player2.choice}.png" alt="${game.player2.choice}" `
+  
+  }
 
-  // function displayResultSection() {
-  //   hide(duelSection)
-  //   show(resultSection)
-  //   resultSection += `
-  //   <img src="pictures/${game.player1.choice}.png" alt="paper" id="paper">`
+  function matchImagesForHuman() {
+    if (game.player1.choice === 'rock') {
+      player1.choice.src = 'pictures/rock.png'
+    } else if(game.player1.choice === 'paper') {
+      player1.choice.src = 'pictures/happy-paper.png'
+    } else if (game.player1.choice === 'scissors') {
+      player1.choice.src = 'pictures/happy-scissors.png'
+    } else if (game.player1.choice === 'lizard') {
+      player1.choice.src = 'pictures/lizard.png'
+    } else if (game.player1.choice === 'alien') {
+      player1.choice.src = 'pictures/happy-alien.png'
+    }
+  }
 
-  // }
+  function matchImgaesForComputer() {
+    if (game.player2.choice === 'rock') {
+      player1.choice.src = 'pictures/rock.png'
+    } else if(game.player2.choice === 'paper') {
+      player1.choice.src = 'pictures/happy-paper.png'
+    } else if (game.player2.choice === 'scissors') {
+      player1.choice.src = 'pictures/happy-scissors.png'
+    } else if (game.player2.choice === 'lizard') {
+      player1.choice.src = 'pictures/lizard.png'
+    } else if (game.player2.choice === 'alien') {
+      player1.choice.src = 'pictures/happy-alien.png'
+    }
+  }
 
   function selectChoice(event) {
-  var id = event.target.id
-    game.player1.choice= id
-    game.player2.choice = game.computerChoice()
+    game.player1.choice = event.target.id
+    game.player2.choice = game.computerChoice(game.gameType)
     var whoWon = game.checkHumanWin()
-    resultSection.innerText = whoWon
-    alert(whoWon);
+    // alert(whoWon);
     updateScore()
+    displayResultSection()
+    // displayResultSection()
   }
 
