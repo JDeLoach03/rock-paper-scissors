@@ -11,8 +11,8 @@
         <section id="human">
             <p>🥰</p>
             <h2>Human</h2>
-            <h3>Wins: <span class="human-wins"></span></h3>
-            <button class="change-game">Change Game</button>
+            <h3 class="human-wins">Wins: 0</h3>
+            <button class="change-game hidden">Change Game</button>
         </section>
         <main id="game">
             <h1>Rock, Paper, Scissors</h1>
@@ -46,7 +46,7 @@
             <section class="choose-fighter hidden center"  id="duel">
                 <h2>Choose your fighter!</h2>
                 <div class="row">
-               <img src="pictures/rock.png" alt="rock" id="rock">
+                <img src="pictures/rock.png" alt="rock" id="rock">
                 <img src="pictures/happy-paper.png" alt="paper" id="paper">
                 <img src="pictures/happy-scissors.png" alt="scissors" id="scissors">
                 <img src="pictures/lizard.png" alt="lizard" id="lizard" class="hidden">
@@ -55,14 +55,14 @@
             </section>
             <section class="result hidden center" id="results">
                 <h2>placeholder</h2>
-                <img src="" alt="">
-                <img src="" alt="">
+                <img class="human-pick" src="" alt="">
+                <img class="computer-pick" src="" alt="">
             </section>
         </main>
         <section id="computer">
             <p>👾</p>
             <h2>Computer</h2>
-            <h3>Wins: <span class="comp-wins"></span></h3>
+            <h3 class="comp-wins">Wins: 0 </h3>
         </section>
     </section>
     <script type="text/javascript" src="player.js"></script>
