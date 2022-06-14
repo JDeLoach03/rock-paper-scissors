@@ -1,8 +1,5 @@
 var game = new Game('classic')
 
-//IF IT INVOLVES USER INTERACTION, FUNCTIONS SHOULD RELATE TO MAIN
-
-
 
 // qeurySelectors
 
@@ -34,7 +31,6 @@ var fighters = document.querySelector('.fighters')
 // window.addEventListener('load', chooseCpuFighter)
 classicBtn.addEventListener('click', displayClassicSection)
 difficultBtn.addEventListener('click', displayDifficultSection)
-
 changeGameBtn.addEventListener('click', changeGame)
 
 //will need to refactor 
@@ -44,7 +40,7 @@ paper.addEventListener('click',runGame)
 scissors.addEventListener('click', runGame)
 lizard.addEventListener('click', runGame)
 alien.addEventListener('click', runGame)
-
+// container.addEventListener('click', runGame)
 
 
 //functions for manipulation
@@ -62,8 +58,6 @@ function show(element) {
     show(duelSection);
     show(changeGameBtn)
     game.gameType = 'classic'
-    //images will be sized appropriately and will need to utilize an event.target for specific elements and somehow attach those to selected choice
-
   }
 
   function displayDifficultSection() {
@@ -82,7 +76,6 @@ function show(element) {
     hide(alien)
     show(mainMenu)
     hide(changeGameBtn)
-    //some interpolation of images based on who won? 
   }
 
   function updateScore() {
@@ -94,6 +87,7 @@ function show(element) {
     hide(chooseFighter)
     show(resultSection)
     show(hands)
+    hide(changeGameBtn)
     hands.innerHTML += `
     <img src="pictures/${game.player1.choice}.png" alt="${game.player1.choice}" id="${game.player1.choice}">
     <img src="pictures/${game.player2.choice}.png" alt="${game.player2.choice}" id="${game.player2.choice}">`
@@ -127,6 +121,8 @@ function show(element) {
     }
     resultSection.innerHTML = ''
     hands.innerHTML = ''
+    game.player1.winner = false
+    game.player2.winner = false
   }
 
 
@@ -137,6 +133,4 @@ function show(element) {
     updateScore()
     displayResultSection()
     setTimeout(resetChoices, 3000)
-    alert(whoWon);
   }
-
