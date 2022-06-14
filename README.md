@@ -23,10 +23,18 @@
   - CSS
 
 
+
+
+
+
+
+
+
+
 ## Illustrations
-  ![Rock Paper Scissors - Home Screen](<img width="125" alt="Screen Shot 2022-06-14 at 12 13 14 PM" src="https://user-images.githubusercontent.com/86126203/173678390-aff435b4-45fb-46a4-97a4-f2c10ce9171b.png">)
-  ![Rock Paper Scissors - Classic Screen](<img width="1414" alt="Screen Shot 2022-06-14 at 12 09 50 PM" src="https://user-images.githubusercontent.com/86126203/173678466-443ebc82-6b6f-4040-8e9f-923490bd10ec.png">)
-  ![Rock Paper Scissors - Difficult Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 10 01 PM" src="https://user-images.githubusercontent.com/86126203/173678553-16bc27d9-4bb3-45ec-b51b-f391d5f14085.png">)
+  ![Rock Paper Scissors - Home Screen](https://user-images.githubusercontent.com/86126203/173681192-34ff2fc0-1266-43d3-a022-2d158e132db5.png)
+  ![Rock Paper Scissors - Classic Screen](https://user-images.githubusercontent.com/86126203/173681397-cb1f17f8-bfb5-452a-b74b-e0283ea426bc.png)
+  ![Rock Paper Scissors - Difficult Screen](https://user-images.githubusercontent.com/86126203/173681497-6ff5000e-5d5b-4bd3-a557-824243dfe737.png)
 
 ## Features
 - No major features, went for the MVP here, and focused on dotting my I's and crossing my T's.
@@ -57,3 +65,13 @@ Visit our published Hang In There Site! [here]()
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
+
+
+
+
+
+
+
+
+
+
