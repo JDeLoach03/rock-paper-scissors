@@ -8,7 +8,7 @@ var game = new Game('classic')
 
 var duelSection = document.querySelector('#duel')
 var resultSection = document.querySelector('#results')
-// var winningResults = document.querySelector('#results h2')
+// var resultText = document.querySelector('.text')
 var humanSection = document.querySelector('#human')
 var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
@@ -90,6 +90,7 @@ function show(element) {
     hide(lizard)
     hide(alien)
     show(mainMenu)
+    hide(changeGameBtn)
     //some interpolation of images based on who won? 
   }
 
@@ -101,47 +102,42 @@ function show(element) {
   function displayResultSection() {
     hide(duelSection)
     show(resultSection)
-    resultSection = `
-    <img src="pictures/${game.player1.choice}.png" alt="${game.player1.choice}">
-    <img src="pictures/${game.player2.choice}.png" alt="${game.player2.choice}" `
+    resultSection.innerHTML += `
+    <img src="pictures/${game.player1.choice}.png" alt="${game.player1.choice}" id="${game.player1.choice}">
+    <img src="pictures/${game.player2.choice}.png" alt="${game.player2.choice}" id="${game.player2.choice}">`
+    displayWinner()
+  }
+
+
+  function displayWinner() {
+    show(resultSection)
+    resultSection.innerText = ``
+    if (game.player1.winner === true) {
+      console.log('my mans said whatever');
+      resultSection.innerText = `${game.player1.name} won!`
+    } else if (game.player2.winner === true) {
+      console.log('I lost I guess?')
+      resultSection.innerText = `${game.player2.name} won!`
+    } else {
+      console.log('draw deez')
+      resultSection.innerText = `It's a draw my dudes!!!!`
+    }
+  }  
+
+
+  // function resetChoices() {
+  //   resultSection.innerHTML = ''
+  // }
+
   
-  }
-
-  function matchImagesForHuman() {
-    if (game.player1.choice === 'rock') {
-      player1.choice.src = 'pictures/rock.png'
-    } else if(game.player1.choice === 'paper') {
-      player1.choice.src = 'pictures/happy-paper.png'
-    } else if (game.player1.choice === 'scissors') {
-      player1.choice.src = 'pictures/happy-scissors.png'
-    } else if (game.player1.choice === 'lizard') {
-      player1.choice.src = 'pictures/lizard.png'
-    } else if (game.player1.choice === 'alien') {
-      player1.choice.src = 'pictures/happy-alien.png'
-    }
-  }
-
-  function matchImgaesForComputer() {
-    if (game.player2.choice === 'rock') {
-      player1.choice.src = 'pictures/rock.png'
-    } else if(game.player2.choice === 'paper') {
-      player1.choice.src = 'pictures/happy-paper.png'
-    } else if (game.player2.choice === 'scissors') {
-      player1.choice.src = 'pictures/happy-scissors.png'
-    } else if (game.player2.choice === 'lizard') {
-      player1.choice.src = 'pictures/lizard.png'
-    } else if (game.player2.choice === 'alien') {
-      player1.choice.src = 'pictures/happy-alien.png'
-    }
-  }
 
   function selectChoice(event) {
     game.player1.choice = event.target.id
     game.player2.choice = game.computerChoice(game.gameType)
     var whoWon = game.checkHumanWin()
-    // alert(whoWon);
     updateScore()
     displayResultSection()
-    // displayResultSection()
+    // resetChoices()
+    alert(whoWon);
   }
 
