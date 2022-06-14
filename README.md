@@ -24,9 +24,11 @@
 
 
 ## Illustrations
-  ![Rock Paper Scissors - Home Screen](https://turingschool.slack.com/files/U02QP8A33J7/F03K721BMK9/screen_shot_2022-06-14_at_12.13.14_pm.png)
-  ![Rock Paper Scissors - Classic Screen](https://turingschool.slack.com/files/U02QP8A33J7/F03KJMVKHM3/screen_shot_2022-06-14_at_12.09.50_pm.png)
-  ![Rock Paper Scissors - Difficult Screen](https://turingschool.slack.com/files/U02QP8A33J7/F03KJMTTACV/screen_shot_2022-06-14_at_12.10.01_pm.png)
+  ![Rock Paper Scissors - Home Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 13 14 PM" src="https://user-images.githubusercontent.com/86126203/173668088-a4ccb547-69b2-4fff-b90d-2373b262feb5.png">
+)
+  ![Rock Paper Scissors - Classic Screen](<img width="1414" alt="Screen Shot 2022-06-14 at 12 09 50 PM" src="https://user-images.githubusercontent.com/86126203/173668438-1180ad51-fc8d-4ea3-9ba2-3be963e8de16.png">
+)
+  ![Rock Paper Scissors - Difficult Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 10 01 PM" src="https://user-images.githubusercontent.com/86126203/173668227-780456e9-6a3d-4687-b84c-d69bfb1a3444.png">)
 
 ## Features
 - No major features, went for the MVP here, and focused on dotting my I's and crossing my T's.
