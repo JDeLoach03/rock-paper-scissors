@@ -39,9 +39,6 @@
 ## Features
 - No major features, went for the MVP here, and focused on dotting my I's and crossing my T's.
 
-## Deployed Page
-
-Visit our published Hang In There Site! [here]()
 
 ## Possible Future Extensions
   - I do think having more emojis to pick from would be cool, so I can pick an angry face if I feel like it OR to match my mood.
