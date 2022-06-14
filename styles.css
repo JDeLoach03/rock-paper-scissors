@@ -88,10 +88,12 @@
       justify-content: center;
   }
 
-  .text {
-      font-size: 100px;
-      height: 100px;
-      width: 100px;
+  .result{
+      font-size:50px;
   }
 
+    .hands-scene {
+        display: flex;
+        justify-content: center;
+    }
  

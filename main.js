@@ -8,7 +8,8 @@ var game = new Game('classic')
 
 var duelSection = document.querySelector('#duel')
 var resultSection = document.querySelector('#results')
-// var resultText = document.querySelector('.text')
+var resultText = document.querySelector('.text')
+var hands = document.querySelector('.hands-scene')
 var humanSection = document.querySelector('#human')
 var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
@@ -23,16 +24,20 @@ var alien = document.querySelector('#alien')
 var changeGameBtn = document.querySelector('.change-game')
 var humanScore = document.querySelector('.human-wins')
 var computerScore = document.querySelector('.comp-wins')
+var chooseFighter = document.querySelector('.choose-fighter')
+var row = document.querySelector('.row')
+var header = document.querySelector('.choose-header')
 // eventListeners
 
-// classicBtn.addEventListener('click', setUpClassicGame)
-// difficultBtn.addEventListener('click', setUpDifficultGame)
 
 // window.addEventListener('load', chooseCpuFighter)
 classicBtn.addEventListener('click', displayClassicSection)
 difficultBtn.addEventListener('click', displayDifficultSection)
 
 changeGameBtn.addEventListener('click', changeGame)
+
+//will need to refactor 
+
 rock.addEventListener('click', selectChoice)
 paper.addEventListener('click',selectChoice)
 scissors.addEventListener('click', selectChoice)
@@ -40,7 +45,6 @@ lizard.addEventListener('click', selectChoice)
 alien.addEventListener('click', selectChoice)
 
 
-//setTimeout(reset, 3000)
 
 //functions for manipulation
 function show(element) {
@@ -51,19 +55,8 @@ function show(element) {
     element.classList.add('hidden');
   }
 
-
-// function pickGame(event) {
-//   if (event.target.id === '')
-  // I need to match the id
-  //the point of this function, would be 
-// }
-
-// function startGame() {
-
-// }
   
   function displayClassicSection() {
-    // console.log('weenie hut general');
     hide(mainMenu);
     show(duelSection);
     show(changeGameBtn)
@@ -73,15 +66,13 @@ function show(element) {
   }
 
   function displayDifficultSection() {
-    // console.log('gangster')
     hide(mainMenu)
     show(duelSection)
     show(lizard)
     show(alien)
     show(changeGameBtn)
     game.gameType = 'difficult'
-    // displayDuelSection()
-    // event listener will need to be attached to initial boxes to begin the switching of the displays
+
   }
 
 
@@ -100,9 +91,10 @@ function show(element) {
     }
 
   function displayResultSection() {
-    hide(duelSection)
+    // hide(row)
+    hide(header)
     show(resultSection)
-    resultSection.innerHTML += `
+    hands.innerHTML = `
     <img src="pictures/${game.player1.choice}.png" alt="${game.player1.choice}" id="${game.player1.choice}">
     <img src="pictures/${game.player2.choice}.png" alt="${game.player2.choice}" id="${game.player2.choice}">`
     displayWinner()
@@ -110,26 +102,29 @@ function show(element) {
 
 
   function displayWinner() {
-    show(resultSection)
-    resultSection.innerText = ``
+    hands.innerHTML = ``
     if (game.player1.winner === true) {
       console.log('my mans said whatever');
-      resultSection.innerText = `${game.player1.name} won!`
+      hands.innerHTML = `${game.player1.name} won!`
     } else if (game.player2.winner === true) {
       console.log('I lost I guess?')
-      resultSection.innerText = `${game.player2.name} won!`
+      hands.innerHTML = `${game.player2.name} won!`
     } else {
       console.log('draw deez')
-      resultSection.innerText = `It's a draw my dudes!!!!`
+      hands.innerHTML = `It's a draw my dudes!!!!`
     }
   }  
 
 
-  // function resetChoices() {
-  //   resultSection.innerHTML = ''
-  // }
+  function resetChoices() {
+    if (game.gameType === 'classic') {
+      displayClassicSection()
+    } else {
+      displayDifficultSection()
+    }
+    resultSection.innerHTML = ''
+  }
 
-  
 
   function selectChoice(event) {
     game.player1.choice = event.target.id
@@ -137,7 +132,8 @@ function show(element) {
     var whoWon = game.checkHumanWin()
     updateScore()
     displayResultSection()
-    // resetChoices()
+    resetChoices()
+    setTimeout(resetChoices, 3000)
     alert(whoWon);
   }
 

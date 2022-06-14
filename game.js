@@ -16,7 +16,6 @@ class Game {
 
     computerChoice(gameType) {
         var choice = this.player2.playerTurn(gameType)
-        console.log(choice);
         return choice
     }
     
