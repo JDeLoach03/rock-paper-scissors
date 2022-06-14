@@ -16,7 +16,6 @@ var humanScore = document.querySelector('.human-wins')
 var computerScore = document.querySelector('.comp-wins')
 var chooseFighter = document.querySelector('.choose-fighter')
 var images= document.querySelector('.image-block')
-var header = document.querySelector('.choose-header')
 var fighters = document.querySelector('.fighters')
 
 

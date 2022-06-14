@@ -22,15 +22,6 @@
   - HTML
   - CSS
 
-
-
-
-
-
-
-
-
-
 ## Illustrations
   ![Rock Paper Scissors - Home Screen](https://user-images.githubusercontent.com/86126203/173681192-34ff2fc0-1266-43d3-a022-2d158e132db5.png)
   ![Rock Paper Scissors - Classic Screen](https://user-images.githubusercontent.com/86126203/173681397-cb1f17f8-bfb5-452a-b74b-e0283ea426bc.png)
@@ -62,13 +53,3 @@
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
-
-
-
-
-
-
-
-
-
-
