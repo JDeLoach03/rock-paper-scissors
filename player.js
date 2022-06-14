@@ -3,6 +3,7 @@ class Player {
         this.name = name;
         this.wins = 0;
         this.choice = ''
+        this.winner = false;
     }
 
     playerTurn(gameType) {
