@@ -9,9 +9,6 @@ var computerSection = document.querySelector('#computer')
 var mainMenu = document.querySelector('#menu')
 var classicBtn = document.querySelector('.classic .btn')
 var difficultBtn = document.querySelector('.difficult .btn')
-var rock = document.querySelector('#rock')
-var paper = document.querySelector('#paper')
-var scissors = document.querySelector('#scissors')
 var lizard = document.querySelector('#lizard')
 var alien = document.querySelector('#alien')
 var changeGameBtn = document.querySelector('.change-game')
@@ -32,17 +29,17 @@ chooseFighter.addEventListener('click', runGame)
 
 //Functions go here
 function show(element) {
-    element.classList.remove('hidden');
+    element.classList.remove('hidden')
   };
   
 function hide(element) {
-  element.classList.add('hidden');
+  element.classList.add('hidden')
 }
 
   
 function displayClassicSection() {
-  hide(mainMenu);
-  show(duelSection);
+  hide(mainMenu)
+  show(duelSection)
   show(changeGameBtn)
   game.gameType = 'classic'
 }

@@ -1,9 +1,9 @@
 class Player {
     constructor(name) {
-        this.name = name;
-        this.wins = 0;
+        this.name = name
+        this.wins = 0
         this.choice = ''
-        this.winner = false;
+        this.winner = false
     }
 
     playerTurn(gameType) {

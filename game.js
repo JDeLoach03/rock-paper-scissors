@@ -1,7 +1,7 @@
 class Game {
     constructor(gameType) {
         this.player1 = new Player('Hearts')
-        this.player2 = new Player('robot face');
+        this.player2 = new Player('robot face')
         this.gameType = gameType
         this.winConditions = {
             rock: ['scissors', 'lizard'],
@@ -9,7 +9,7 @@ class Game {
             scissors: ['paper', 'lizard'],
             lizard: ['paper', 'alien'],
             alien: ['scissors', 'rock']
-        };
+        }
     }
 
     computerChoice(gameType) {
