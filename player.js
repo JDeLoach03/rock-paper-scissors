@@ -8,11 +8,9 @@ class Player {
 
     playerTurn(gameType) {
         if (gameType === 'classic') {
-            console.log('hello');
             var classicFighters = ['rock', 'paper', 'scissors']
             return classicFighters[Math.floor(Math.random() * classicFighters.length)]
         } else if (gameType === 'difficult') {
-            console.log('gang')
             var difficultFighters = ['rock', 'paper', 'scissors', 'lizard', 'alien']
             return difficultFighters[Math.floor(Math.random() * difficultFighters.length)]
         }
