@@ -27,6 +27,7 @@ var computerScore = document.querySelector('.comp-wins')
 var chooseFighter = document.querySelector('.choose-fighter')
 var row = document.querySelector('.row')
 var header = document.querySelector('.choose-header')
+var fighters = document.querySelector('.fighters')
 // eventListeners
 
 
@@ -38,11 +39,11 @@ changeGameBtn.addEventListener('click', changeGame)
 
 //will need to refactor 
 
-rock.addEventListener('click', selectChoice)
-paper.addEventListener('click',selectChoice)
-scissors.addEventListener('click', selectChoice)
-lizard.addEventListener('click', selectChoice)
-alien.addEventListener('click', selectChoice)
+rock.addEventListener('click', runGame)
+paper.addEventListener('click',runGame)
+scissors.addEventListener('click', runGame)
+lizard.addEventListener('click', runGame)
+alien.addEventListener('click', runGame)
 
 
 
@@ -72,7 +73,6 @@ function show(element) {
     show(alien)
     show(changeGameBtn)
     game.gameType = 'difficult'
-
   }
 
 
@@ -91,10 +91,10 @@ function show(element) {
     }
 
   function displayResultSection() {
-    // hide(row)
-    hide(header)
+    hide(chooseFighter)
     show(resultSection)
-    hands.innerHTML = `
+    show(hands)
+    hands.innerHTML += `
     <img src="pictures/${game.player1.choice}.png" alt="${game.player1.choice}" id="${game.player1.choice}">
     <img src="pictures/${game.player2.choice}.png" alt="${game.player2.choice}" id="${game.player2.choice}">`
     displayWinner()
@@ -102,37 +102,40 @@ function show(element) {
 
 
   function displayWinner() {
-    hands.innerHTML = ``
+    resultSection.innerHTML = ''
     if (game.player1.winner === true) {
-      console.log('my mans said whatever');
-      hands.innerHTML = `${game.player1.name} won!`
+      console.log('player win clearly')
+     resultSection.innerHTML = `${game.player1.name} won!`
     } else if (game.player2.winner === true) {
       console.log('I lost I guess?')
-      hands.innerHTML = `${game.player2.name} won!`
+      resultSection.innerHTML = `${game.player2.name} won!`
     } else {
       console.log('draw deez')
-      hands.innerHTML = `It's a draw my dudes!!!!`
+      resultSection.innerHTML = `It's a draw my dudes!!!!`
     }
   }  
 
 
   function resetChoices() {
+    show(chooseFighter)
+    show(row)
+    hide(resultSection)
     if (game.gameType === 'classic') {
       displayClassicSection()
     } else {
       displayDifficultSection()
     }
     resultSection.innerHTML = ''
+    hands.innerHTML = ''
   }
 
 
-  function selectChoice(event) {
+  function runGame(event) {
     game.player1.choice = event.target.id
     game.player2.choice = game.computerChoice(game.gameType)
     var whoWon = game.checkHumanWin()
     updateScore()
     displayResultSection()
-    resetChoices()
     setTimeout(resetChoices, 3000)
     alert(whoWon);
   }
