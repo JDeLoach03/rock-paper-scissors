@@ -23,19 +23,22 @@
   - CSS
 
 
+
+
+
+
+
+
+
+
 ## Illustrations
-  ![Rock Paper Scissors - Home Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 13 14 PM" src="https://user-images.githubusercontent.com/86126203/173668088-a4ccb547-69b2-4fff-b90d-2373b262feb5.png">
-)
-  ![Rock Paper Scissors - Classic Screen](<img width="1414" alt="Screen Shot 2022-06-14 at 12 09 50 PM" src="https://user-images.githubusercontent.com/86126203/173668438-1180ad51-fc8d-4ea3-9ba2-3be963e8de16.png">
-)
-  ![Rock Paper Scissors - Difficult Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 10 01 PM" src="https://user-images.githubusercontent.com/86126203/173668227-780456e9-6a3d-4687-b84c-d69bfb1a3444.png">)
+  ![Rock Paper Scissors - Home Screen](https://user-images.githubusercontent.com/86126203/173681192-34ff2fc0-1266-43d3-a022-2d158e132db5.png)
+  ![Rock Paper Scissors - Classic Screen](https://user-images.githubusercontent.com/86126203/173681397-cb1f17f8-bfb5-452a-b74b-e0283ea426bc.png)
+  ![Rock Paper Scissors - Difficult Screen](https://user-images.githubusercontent.com/86126203/173681497-6ff5000e-5d5b-4bd3-a557-824243dfe737.png)
 
 ## Features
 - No major features, went for the MVP here, and focused on dotting my I's and crossing my T's.
 
-## Deployed Page
-
-Visit our published Hang In There Site! [here]()
 
 ## Possible Future Extensions
   - I do think having more emojis to pick from would be cool, so I can pick an angry face if I feel like it OR to match my mood.
@@ -59,3 +62,13 @@ Visit our published Hang In There Site! [here]()
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
+
+
+
+
+
+
+
+
+
+
