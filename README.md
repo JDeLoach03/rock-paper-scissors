@@ -24,11 +24,9 @@
 
 
 ## Illustrations
-  ![Rock Paper Scissors - Home Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 13 14 PM" src="https://user-images.githubusercontent.com/86126203/173668088-a4ccb547-69b2-4fff-b90d-2373b262feb5.png">
-)
-  ![Rock Paper Scissors - Classic Screen](<img width="1414" alt="Screen Shot 2022-06-14 at 12 09 50 PM" src="https://user-images.githubusercontent.com/86126203/173668438-1180ad51-fc8d-4ea3-9ba2-3be963e8de16.png">
-)
-  ![Rock Paper Scissors - Difficult Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 10 01 PM" src="https://user-images.githubusercontent.com/86126203/173668227-780456e9-6a3d-4687-b84c-d69bfb1a3444.png">)
+  ![Rock Paper Scissors - Home Screen](<img width="125" alt="Screen Shot 2022-06-14 at 12 13 14 PM" src="https://user-images.githubusercontent.com/86126203/173678390-aff435b4-45fb-46a4-97a4-f2c10ce9171b.png">)
+  ![Rock Paper Scissors - Classic Screen](<img width="1414" alt="Screen Shot 2022-06-14 at 12 09 50 PM" src="https://user-images.githubusercontent.com/86126203/173678466-443ebc82-6b6f-4040-8e9f-923490bd10ec.png">)
+  ![Rock Paper Scissors - Difficult Screen](<img width="1403" alt="Screen Shot 2022-06-14 at 12 10 01 PM" src="https://user-images.githubusercontent.com/86126203/173678553-16bc27d9-4bb3-45ec-b51b-f391d5f14085.png">)
 
 ## Features
 - No major features, went for the MVP here, and focused on dotting my I's and crossing my T's.
