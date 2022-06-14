@@ -15,7 +15,7 @@
   - [Project Specs](#project-specs)
 
 ## Introduction
-  - The purpose of this project was to allow students to practice some of the foundational concepts learned so far within the module. There are other extensions that test different skills that we can build on. The project allowed us to personalize/entertain different ideas with HTML/CSS as well as the functionality(JavaScript) behind the web page created.
+  - The purpose of this project was to allow students to show all that they have learned throughout the entire inning. Focus on problem solving, to break down big ideas, into manageable, actionable steps. BUT who is really better than the computer these days? Games and AI are getting real complex... so we added in TWO... count em... TWO more options >:) 
 
 ## Technologies
   - Javascript
@@ -24,19 +24,19 @@
 
 
 ## Illustrations
-  ![What's For Dinner?](https://frontend.turing.edu/projects/module-1/assets/dinner/dinner_0.png)
+  ![Rock Paper Scissors - Home Screen](https://turingschool.slack.com/files/U02QP8A33J7/F03K721BMK9/screen_shot_2022-06-14_at_12.13.14_pm.png)
+  ![Rock Paper Scissors - Classic Screen](https://turingschool.slack.com/files/U02QP8A33J7/F03KJMVKHM3/screen_shot_2022-06-14_at_12.09.50_pm.png)
+  ![Rock Paper Scissors - Difficult Screen](https://turingschool.slack.com/files/U02QP8A33J7/F03KJMTTACV/screen_shot_2022-06-14_at_12.10.01_pm.png)
 
 ## Features
-- Any of the radio buttons chosen will output a specific item from that array.
-- The Choose Your Own Adventure I chose was the "Entire Meal Functionality". Each button will output random items (side, main dish, dessert) OR one of each for a meal idea for any user clicking the buttons.
+- No major features, went for the MVP here, and focused on dotting my I's and crossing my T's.
 
 ## Deployed Page
 
-Visit our published Hang In There Site! [here](https://jdeloach03.github.io/whats-for-dinner/)
+Visit our published Hang In There Site! [here]()
 
 ## Possible Future Extensions
-  - A login page would be super cool, if it were responsive in a sense of allowing users login to be saved/recipe ideas they like to be stored within their page.
-  - Adding in transitions via CSS would have appreciated.
+  - I do think having more emojis to pick from would be cool, so I can pick an angry face if I feel like it OR to match my mood.
 
 ## Set Up
 
@@ -48,8 +48,7 @@ Visit our published Hang In There Site! [here](https://jdeloach03.github.io/what
 
 ## Sources
   - [MDN](http://developer.mozilla.org/en-US/)
-  -[JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
-  -[YouTube](https://www.youtube.com/)
+  - [JavaTPoint](https://www.javatpoint.com/how-to-check-a-radio-button-using-javascript)
   - [W3Schools](https://www.w3schools.com/)
 
 ## Contributors
@@ -57,4 +56,4 @@ Visit our published Hang In There Site! [here](https://jdeloach03.github.io/what
 
 
 ## Project Specs
-  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)

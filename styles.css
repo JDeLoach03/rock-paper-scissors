@@ -1,8 +1,15 @@
 /* * {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
   } */
+
+ body {
+     font-family: monospace;
+     height: 100%;
+     margin: 0 auto;
+     min-height: 100vh;
+     color: white;
+ }
 
   .hidden {
     display: none!important;
@@ -28,8 +35,8 @@
 
   #game {
     height: 100vh;
-    width: 80%
-    /* background-color: blueviolet; */
+    width: 80%;
+    background-color: #455054;
   }
 
   #human, #computer {
@@ -38,7 +45,7 @@
       height: 100vh;
       width: 20%;
       text-align: center;
-      background-color: blueviolet;
+      background-color: #e69d45;
       filter: brightness(80%)
   }
 
@@ -52,15 +59,17 @@
       margin: 30px;
       width: 108px;
       height: 40px;
-      border: thick double #000000;
+      border: thick double white;
       border-radius: 15px;
       align-self: center;
+      color: white;
   }
 
   .btn {
       margin: 15px;
       width: 170px;
       padding: 5%;
+      background-color: #d45769;
       border: thick double #000000;
       border-radius: 15px;
   }
@@ -94,7 +103,6 @@
 
     .hands-scene {
         display: flex;
-        /* flex-direction: column; */
         justify-content: center;
     }
  
